@@ -19,7 +19,7 @@ public class Product {
 
     public void info() {
         System.out.println("Наименование: " + name
-                + "\nДата производства: " + productionDate.getDate() + "." + productionDate.getMonth() + "." + (productionDate.getYear() + 1900)
+                + "\nДата производства: " + productionDate.getDate() + "." + productionDate.getMonth() + "." + (productionDate.getYear())
                 + "\nПроизводитель: " + manufacturer
                 + "\nСтрана происхождения: " + countryOfOrigin
                 + "\nЦена: " + price / 100 + " рублей " + price % 100 + " копеек"
