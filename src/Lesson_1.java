@@ -49,7 +49,7 @@ public class Lesson_1 {
     private static void checkSumSign() {
         int a = 10;
         int b = -11;
-        if ((a + b) >= 0) {
+        if (a + b >= 0) {
             System.out.println("Сумма положительная\n");
         } else {
             System.out.println("Сумма отрицательная\n");
@@ -82,7 +82,7 @@ public class Lesson_1 {
     //Задание 5
     private static boolean checkSumRange(int a, int b) {
         int c = a + b;
-        return (c >= 10) & (c <= 20);
+        return c >= 10 && c <= 20;
     }
 
     //Задание 6
@@ -174,5 +174,4 @@ public class Lesson_1 {
         Arrays.fill(myArr, initialValue);
         return myArr;
     }
-
 }
