@@ -16,7 +16,6 @@ public class Park {
             this.price = price;
             this.openingHours = openingHours;
         }
-
     }
 
     public Park(String name, String address, String owner, String inn, long authorizedCapital, Visitors visitors) {
