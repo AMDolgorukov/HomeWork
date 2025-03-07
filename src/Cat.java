@@ -1,7 +1,6 @@
 public class Cat extends Animal {
     public static int catNumber = 0;
     public static int bowl = 10;
-    // private int stomach = 0;
     public boolean satiety = false;
 
     @Override
@@ -26,7 +25,6 @@ public class Cat extends Animal {
                 System.out.println(getName() + " покушал и теперь доволен(а)");
             } else System.out.println("Недостаточно еды в миске, " + getName() + " расстроен(а)");
         } else System.out.println(getName() + " сыт(а)");
-
     }
 
     public static void fillBowl(int a) {
