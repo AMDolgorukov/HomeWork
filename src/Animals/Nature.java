@@ -1,3 +1,5 @@
+package Animals;
+
 public class Nature {
     public static void main(String[] args) {
         Dog dogMuhtar = new Dog("Мухтар");

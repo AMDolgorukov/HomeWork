@@ -1,3 +1,5 @@
+package Animals;
+
 public class Cat extends Animal {
     public static int catNumber = 0;
     public static int bowl = 10;
