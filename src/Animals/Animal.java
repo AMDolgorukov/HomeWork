@@ -1,7 +1,7 @@
 package Animals;
 
 public abstract class Animal {
-    private String name;
+    private final String name;
     public static int animalNumber;
 
     public abstract void run(int run);
