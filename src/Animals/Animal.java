@@ -4,9 +4,9 @@ public abstract class Animal {
     private String name;
     public static int animalNumber;
 
-    public abstract void run(int r);
+    public abstract void run(int run);
 
-    public abstract void swim(int s);
+    public abstract void swim(int swim);
 
     public String getName() {
         return name;

@@ -2,8 +2,8 @@ package Animals;
 
 public class Nature {
     public static void main(String[] args) {
-        Dog dogMuhtar = new Dog("Мухтар");
-        Cat catBegimot = new Cat("Бегимот");
+        Dog muhtar = new Dog("Мухтар");
+        Cat begemot = new Cat("Бегемот");
         Dog bim = new Dog("Белый Бим, черное ухо");
         Cat matroskin = new Cat("Матроскин");
         Dog sharik = new Dog("Шарик");
@@ -12,8 +12,8 @@ public class Nature {
         Cat karamelka = new Cat("Карамелька");
 
         //Гоняем котов и собак
-        dogMuhtar.run(1000);
-        catBegimot.run(50);
+        muhtar.run(1000);
+        begemot.run(50);
         bim.run(499);
         matroskin.swim(1);
         sharik.swim(9);
@@ -24,13 +24,13 @@ public class Nature {
         //Кормим котов
         Cat.fillBowl(25);
         matroskin.eat();
-        catBegimot.eat();
+        begemot.eat();
 
         System.out.println();
 
         //Массив котов
         Cat.fillBowl(59);
-        Cat[] catCafe = {catBegimot, matroskin, korzhik, kompot, karamelka};
+        Cat[] catCafe = {begemot, matroskin, korzhik, kompot, karamelka};
         for (Cat cat : catCafe) {
             cat.eat();
         }
@@ -39,9 +39,8 @@ public class Nature {
 
         for (Cat cat : catCafe) {
             if (cat.satiety) {
-                System.out.println(cat.getName() + " сыт");
+                System.out.println(cat.getName() + " сыт(а)");
             } else System.out.println(cat.getName() + " голоден(на)");
         }
-
     }
 }
