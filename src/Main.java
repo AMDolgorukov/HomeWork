@@ -1,11 +1,8 @@
 public class Main {
-    public static void main(String[] args) throws MyArraySizeException, MyArrayDateException {
+    public static void main(String[] args) {
         String[][] strArrOk = {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
         String[][] strArrOverSize = {{"1", "2", "3", "4", "111"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
         String[][] strArrInvalid = {{"1", "2", "3", "4"}, {"пять", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
-
-        //int s = offRoadArr(strArrOverSize);
-        //int s = offRoadArr(strArrInvalid);
 
         try {
             System.out.println("\n1) Правильный массив");
@@ -13,8 +10,8 @@ public class Main {
             System.out.println(sum);
         } catch (MyArraySizeException e) {
             System.out.println("Массив недопустимого размера");
-        } catch (MyArrayDateException e) {
-            System.out.println("Недопустимое значение в ячейке");
+        } catch (MyArrayDataException e) {
+            System.out.println(e.getMessage());
         }
 
         try {
@@ -23,8 +20,8 @@ public class Main {
             System.out.println(sum);
         } catch (MyArraySizeException e) {
             System.out.println("Массив недопустимого размера");
-        } catch (MyArrayDateException e) {
-            System.out.println("Недопустимое значение в ячейке");
+        } catch (MyArrayDataException e) {
+            System.out.println(e.getMessage());
         }
 
         try {
@@ -33,19 +30,20 @@ public class Main {
             System.out.println(sum);
         } catch (MyArraySizeException e) {
             System.out.println("Массив недопустимого размера");
-        } catch (MyArrayDateException e) {
-            System.out.println("Недопустимое значение в ячейке");
+        } catch (MyArrayDataException e) {
+            System.out.println(e.getMessage());
         }
 
         try {
             System.out.println("\n4) Этот индекс, которого нет...");
-            String sum = strArrOk[3][7];
-        } catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Такой ячейки нет в массиве");
+            String sumStr = strArrOk[3][7];
+            System.out.println(sumStr);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Такой ячейки нет в массиве\n");
         }
     }
 
-    public static int offRoadArr(String[][] arr) throws MyArraySizeException, MyArrayDateException {
+    public static int offRoadArr(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         if (arr.length != 4) {
             throw new MyArraySizeException("Массив недопустимого размера");
         }
@@ -56,15 +54,15 @@ public class Main {
         }
         int sum = 0;
         for (int j = 0; j < arr.length; j++) {
-            for (int i = 0; i < arr.length; i++) {
+            for (int i = 0; i < arr[j].length; i++) {
                 try {
                     sum += Integer.parseInt(arr[j][i]);
                 } catch (NumberFormatException e) {
-                    throw new MyArrayDateException("Недопустимое значение в ячейке " + j + " - " + i);
+                    throw new MyArrayDataException("Недопустимое значение '" + arr[j][i] + "' в ячейке [" + j + "][" + i + "]");
                 }
             }
         }
-        System.out.print("Сумма элементов массива ");
+        System.out.print("Сумма элементов массива: ");
         return sum;
     }
 }
