@@ -2,12 +2,7 @@ package Education;
 
 import java.util.*;
 
-public class University extends HashSet {
-    Students students;
-
-    public University(Students students) {
-        this.students = students;
-    }
+public class University {
 
     // Отчисление студентов
     static void kickStudent(HashSet<Students> hs) {
