@@ -14,12 +14,12 @@ public class Education {
 
         Students student1 = new Students("Калашников Михаил", 1, "САУ-11", (HashMap<String, Integer>) Stream.of(
                 new AbstractMap.SimpleEntry<>("Матанализ", 3),
-                new AbstractMap.SimpleEntry<>("Инжграф", 2),
-                new AbstractMap.SimpleEntry<>("Термех", 3)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue)));
+                new AbstractMap.SimpleEntry<>("Инжграф", 3),
+                new AbstractMap.SimpleEntry<>("Термех", 5)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue)));
         Students student2 = new Students("Достоевский Федор", 2, "ЭКД-11", (HashMap<String, Integer>) Stream.of(
                 new AbstractMap.SimpleEntry<>("Химия", 3),
-                new AbstractMap.SimpleEntry<>("Физика", 3),
-                new AbstractMap.SimpleEntry<>("Философия", 5)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue)));
+                new AbstractMap.SimpleEntry<>("Физика", 2),
+                new AbstractMap.SimpleEntry<>("Философия", 3)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue)));
         Students student3 = new Students("Хабенский Константин", 6, "Крови", (HashMap<String, Integer>) Stream.of(
                 new AbstractMap.SimpleEntry<>("Сопромат", 3),
                 new AbstractMap.SimpleEntry<>("Физкультура", 4),
@@ -31,12 +31,15 @@ public class Education {
 
         printStudents(listOfStudents);
 
-        kickStudent222(listOfStudents);
+        // Отчислили
+        kickStudent(listOfStudents);
         printStudents(listOfStudents);
 
+        // Перевели
         studentCourseUp(listOfStudents);
         printStudents(listOfStudents);
 
+        // Студенты на курсе
         printStudents(listOfStudents,2);
         printStudents(listOfStudents,3);
         printStudents(listOfStudents,6);

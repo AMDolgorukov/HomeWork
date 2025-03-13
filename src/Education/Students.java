@@ -9,9 +9,9 @@ public class Students {
     HashMap<String, Integer> score;
 
     public Students(String name,
-                   int course,
-                   String group,
-                   HashMap<String, Integer> score) {
+                    int course,
+                    String group,
+                    HashMap<String, Integer> score) {
         this.name = name;
         this.course = course;
         this.group = group;
