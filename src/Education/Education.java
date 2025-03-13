@@ -29,16 +29,16 @@ public class Education {
         listOfStudents.add(student2);
         listOfStudents.add(student3);
 
+        printStudents(listOfStudents);
 
-//        printStudents(listOfStudents);
+        kickStudent222(listOfStudents);
+        printStudents(listOfStudents);
 
-        kickStudent(listOfStudents);
-//        printStudents(listOfStudents);
-//
         studentCourseUp(listOfStudents);
-//
-//        printStudents(listOfStudents,2);
-//        printStudents(listOfStudents,3);
-//        printStudents(listOfStudents,6);
+        printStudents(listOfStudents);
+
+        printStudents(listOfStudents,2);
+        printStudents(listOfStudents,3);
+        printStudents(listOfStudents,6);
     }
 }
