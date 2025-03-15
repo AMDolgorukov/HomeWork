@@ -8,7 +8,7 @@ public class Main {
         phoneDirectory.add("Никулин", 88002000500L);
         phoneDirectory.add("Моргунов", 89999999999L);
         phoneDirectory.add("Никулин", 88992111543L);
-        phoneDirectory.add("Миргунов", 89988776655L);
+        phoneDirectory.add("Моргунов", 89988776655L);
 
         phoneDirectory.get("Вицин");
         phoneDirectory.get("Никулин");

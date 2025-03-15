@@ -49,9 +49,9 @@ public class University {
     }
 
     // Список студентов курса
-    static void printStudents(HashSet<Students> students, int c) {
+    static void printStudents(HashSet<Students> students, int course) {
         students.forEach(student -> {
-            if (student.course == c) {
+            if (student.course == course) {
                 System.out.println("\nСтудент: " + student.name + "\nКурс: " + student.course + "\nГруппа: " + student.group + "\nУспеваемость: ");
                 for (Map.Entry<String, Integer> entry : student.score.entrySet()) {
                     System.out.print("\t" + entry.getKey() + ": " + entry.getValue() + "\n");
